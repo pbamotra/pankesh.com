@@ -1,0 +1,16 @@
+/* This file contains all the constants for colors and font styles */
+
+// If changing body-font, update the fonts.googleapis.com link in _includes/head.html
+$body-font:  ETBembo, "Chronicle Text G2", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+$sans-font:  ETBembo, "Chronicle Text G2", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+$code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+$url-font: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+
+$text-color: #111;
+$bg-color: #fdfdff;
+$contrast-color: #08a000;
+$border-color: #333333;
+$link-style: underline; // choices are 'color' or 'underline'. Default is color using $contrast-color set above
+$col-width: 55%;
+$body-left-padding: 12.5%
+

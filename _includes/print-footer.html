@@ -1,0 +1,7 @@
+<span class="print-footer">
+    {% if page.date %}
+        {{ page.title }} - {{ page.date | date: "%B %-d, %Y" }} - <span style="color:red">♥</span> - A print from {{site.url}}
+    {% else %}
+        {{ page.title }} <span style="color:red">♥</span> - A print from {{site.url}}
+    {% endif %}
+</span>

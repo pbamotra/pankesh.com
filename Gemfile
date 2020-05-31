@@ -1,0 +1,15 @@
+source 'https://rubygems.org'
+gemspec
+
+gem 'jekyll'
+gem 'rouge'
+gem 'jekyll-target-blank'
+gem 'jekyll-picture-tag'
+gem 'jekyll-mentions'
+gem 'jekyll-gist'
+gem 'jekyll-sitemap'
+gem 'jekyll-tagging'
+gem 'jekyll-paginate'
+gem 'jekyll-inline-svg'
+gem 'jekyll-archives'
+gem 'jekyll-stickyposts'

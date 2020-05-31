@@ -1,0 +1,66 @@
+url: pankesh.com
+title: Pᵇ
+subtitle: I like to prove it prove it
+author: pankesh bamotra
+simple_search: http://google.com/search
+authormail: pankesh.bamotra﹫gmail.com
+description: I like to prove it prove it
+name: pankesh
+markdown: kramdown
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+permalink: /articles/:title
+timezone: America/Los_Angeles
+excerpt_separator: <!--more-->  # you can specify your own separator, of course.
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'UploadToGithub.Rakefile', 'README.md', 'LICENSE']
+post:
+  template: _post.txt
+  extension: md
+future: true
+page:
+  template: _page.txt
+  extension: md
+editor: gvim
+git:
+  branch: master
+plugins:
+  - jekyll-target-blank
+keep_files: ['.git', 'CNAME', '_config.yml']
+
+header_pages:
+  -
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      comments: false
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
+ - jekyll-picture-tag
+ - jekyll-mentions
+ - jekyll-gist
+ - jekyll-sitemap
+ - jekyll-paginate
+ - jekyll-inline-svg
+ - jekyll-archives
+ - jekyll-stickyposts
+
+paginate: 5
+paginate_path: "/page/:num/"
+
+svg:
+  optimize: true
+
+sass:
+    style: compressed
+
+stickyposts:
+  # enabled: false   # Enable StickyPosts; default: true
+  # debug: true      # Show additional info; default: false
+  # sort: "date"      # Optional sort field; default: "date", use "none" to avoid sorting
+  # reverse: false     # Ascending order, default: false
+  retain: false      # Also show sticky posts in their original positions; default: false
+  # reverse_sticky: true    # Reverse the order of the sticky posts, e.g. oldest first; default: false
