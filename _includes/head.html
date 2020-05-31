@@ -34,38 +34,39 @@
   <!-- Google Fonts loaded here -->
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans' rel='stylesheet' type='text/css'>
   
-  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
-  {% if site.data.options.mathjax %}
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-      MathJax.Hub.Config({
-      extensions: ["tex2jax.js"],
-      jax: ["input/TeX", "output/HTML-CSS"],
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-        processEscapes: true,
-        processEnvironments: true,
-        preview: "TeX"
-      },
-      "HTML-CSS": {
-        fonts: ["TeX"],
-        styles: {
-          ".MathJax_Display": {"font-size": "125%"},
-        }
-      },
-      // https://github.com/mathjax/MathJax/issues/1081#issuecomment-399878942
-      TeX: {Augment: {
-        Definitions: {macros: {xfrac: 'XFrac'}},
-        Parse: {prototype: {
-          XFrac: function (name) {
-            var num = this.ParseArg(name);
-            var den = this.ParseArg(name);
-            this.Push(MathJax.ElementJax.mml.mfrac(num,den).With({bevelled: true}));
+  {% if page.haslatex %}
+    {% if site.data.options.mathjax %}
+      <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true,
+          processEnvironments: true,
+          preview: "TeX"
+        },
+        "HTML-CSS": {
+          fonts: ["TeX"],
+          styles: {
+            ".MathJax_Display": {"font-size": "125%"},
           }
+        },
+        // https://github.com/mathjax/MathJax/issues/1081#issuecomment-399878942
+        TeX: {Augment: {
+          Definitions: {macros: {xfrac: 'XFrac'}},
+          Parse: {prototype: {
+            XFrac: function (name) {
+              var num = this.ParseArg(name);
+              var den = this.ParseArg(name);
+              this.Push(MathJax.ElementJax.mml.mfrac(num,den).With({bevelled: true}));
+            }
+          }}
         }}
-      }}
-    });
-    </script>
+      });
+      </script>
+    {% endif %}
   {% endif %}
 
   <link rel="stylesheet" type="text/css" href="{{ "/css/tufte.css" | prepend: site.baseurl }}">
