@@ -1,16 +1,14 @@
 [[redirects]]
-  from = "/*"
-  to = "https://pankesh.com"
-  status = 301
-  force = true
-  headers = {X-From = "Netlify"}
+from = "/*"
+to = "https://www.pankesh.com"
+status = 301
+force = true
 
 [[redirects]]
-  from = "/"
-  to = "https://pankesh.com"
-  status = 301
-  force = true
-  headers = {X-From = "Netlify"}
+from = "/"
+to = "https://www.pankesh.com"
+status = 301
+force = true
 
 [[headers]]
 for = "/*"
