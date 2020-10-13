@@ -1,3 +1,17 @@
+[[redirects]]
+  from = "/*"
+  to = "https://pankesh.com"
+  status = 301
+  force = true
+  headers = {X-From = "Netlify"}
+
+[[redirects]]
+  from = "/"
+  to = "https://pankesh.com"
+  status = 301
+  force = true
+  headers = {X-From = "Netlify"}
+
 [[headers]]
 for = "/*"
 [headers.values]
